@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: jk-dosa-cafe-api
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: PORT
+        value: 3000
